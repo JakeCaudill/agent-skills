@@ -8,7 +8,7 @@ Installed skills are authoritative at their install paths on the host (`~/.agent
 
 ### `conductor`
 
-Coordinates project state, the next consequential move, and user-visible work. Supervises; does not implement.
+Coordinates project state, the next consequential move, and routed work. Uses task-local subagents for autonomous work and creates a user-visible task only when Jake is likely to contribute. Supervises; does not implement.
 
 ```
 conductor/
@@ -23,8 +23,8 @@ Install path: `~/.codex/skills/conductor/`
 
 This is a revision of the 2026-08-25 installed version, which had the whole skill in a single 8,208-byte `SKILL.md`. Changes:
 
-- **Split by branch.** Loop discipline and routed-work mechanics moved behind context pointers — they fire only on multi-attempt work and on runs where a task actually exists. Spine is 5,499 bytes, a 33% cut.
-- **Guardrails stay inline.** Task-creation authorization, the no-hidden-subagent rule, and lifecycle-state distinctness are never disclosed behind a pointer.
+- **Split by branch.** Project health, loop discipline, and routed-work mechanics sit behind context pointers and load only when their branch applies.
+- **Routing stays inline.** Expected Jake input is the visibility gate; autonomous work defaults to task-local subagents, while Conductor creates user-visible tasks itself when the gate is met.
 - **Restored `AGENTS.md` discovery**, dropped in an earlier compression, plus the missing branch: when a needed evidence binding is absent, report the missing binding rather than inferring one.
 - **Defined *frontier***, which the report format depends on.
 - **Completion criteria** added to move selection, the handoff, the loop, and supervision.

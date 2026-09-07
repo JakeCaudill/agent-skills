@@ -27,4 +27,4 @@ Batch human interactions into one runnable handoff and one meaningful confirmati
 
 Seek fresh authority when a correction changes an invariant, expands scope, adds a new mutation, or follows a mutation failure.
 
-The envelope covers retryable pre-mutation tooling only. Creating a user-visible task sits outside it and always needs its own authorization under `SKILL.md`.
+The envelope covers retryable pre-mutation tooling only. Create a user-visible task only when the input-likelihood gate in `SKILL.md` selects it.
