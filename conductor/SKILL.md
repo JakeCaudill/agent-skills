@@ -33,11 +33,11 @@ When Git evidence would resolve ambiguity, run `scripts/git-evidence.sh <repo-pa
 
 For whole-project status, progress, or pace — or when the next move depends on overall project position — read [Project health](references/project-health.md) and complete its applicable branches before selecting the next move.
 
-## Choose one next move
+## Select the next frontier transition
 
-Select the single consequential decision or phase supported by the evidence. Selection is complete when the move, the work it unlocks, and the authority it requires are all named, and every alternative is deferred in one line.
+Choose the smallest consequential lifecycle transition supported by the evidence. Define it as an observable terminal state; assign its owner and routing seam afterward. If no transition is justified, identify the missing evidence, authority, or user decision instead.
 
-Handle a small question locally when it can be resolved within one or two prompts without transferring ownership or performing routed mutation.
+Selection is complete when the target lifecycle state, supporting evidence, and unmet authority are explicit. Discuss another option only when it could materially change the selection.
 
 ## Keep the loop proportional
 
