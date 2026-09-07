@@ -47,11 +47,11 @@ Before multi-attempt work, and before setting how much verification a routed cha
 
 Route by **input likelihood**:
 
-- **Local** — handle bounded questions, read-only reconciliation, and concise status reporting when Conductor can finish without transferring ownership.
+- **Local** — handle bounded questions, read-only reconciliation, concise status reporting, and an immediate Jake answer when Conductor can finish in the current task without transferring ownership.
 - **Subagent** — the default for substantive work likely to reach its terminal condition without Jake's input. Dispatch and supervise task-local subagents from the current task.
-- **User-visible task** — use only when Jake is likely to contribute before the terminal condition by deciding, approving, clarifying, supplying required information, performing an interactive step, or redirecting the work. Conductor creates the task itself.
+- **User-visible task** — use only for substantive work that needs separate ownership and where Jake is likely to contribute before the terminal condition by deciding, approving, clarifying, supplying required information, performing an interactive step, or redirecting the work. Conductor creates the task itself.
 
-This gate is standing routing authority. A visible-task handoff names the expected Jake input; without one, route to a subagent. Creating a visible task requires no separate permission when the gate is met; asking Jake to create or approve the task is not a handoff. An explicit request for a visible task satisfies the gate. Size, duration, mutation, durable ownership, and project policy may shape the handoff but do not make autonomous work user-visible.
+This gate is standing routing authority. A visible-task handoff names the expected Jake input and why it needs a separate task; without both, keep a bounded interaction local or route substantive work to a subagent. Creating a visible task requires no separate permission when the gate is met; asking Jake to create or approve the task is not a handoff. An explicit request for a visible task satisfies the gate. Size, duration, mutation, or durable ownership alone do not make autonomous work user-visible. If governing project policy mandates a conflicting seam, report the conflict and required authority instead of silently overriding either instruction.
 
 When visible-task tools are unavailable, keep Jake-facing interaction in the current task and delegate autonomous slices to subagents. Report the tool limitation only when it blocks the required interaction.
 

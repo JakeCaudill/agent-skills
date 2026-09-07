@@ -8,7 +8,7 @@ Give each subagent a bounded objective and terminal condition; verified inputs a
 
 Use the inherited model and reasoning effort unless a supported override materially improves the task's risk, complexity, or cost. Record a material override when consolidating the result.
 
-Supervise the subagent from the current task. Check its claimed terminal state against the evidence required by the project, integrate compatible results, and route any newly discovered Jake-input boundary through the gate in `SKILL.md`.
+Supervise the subagent from the current task. Check its claimed terminal state against the evidence required by the project, consolidate compatible findings, and route any newly discovered Jake-input boundary through the gate in `SKILL.md`.
 
 Delegation is complete when the terminal condition is verified or a concrete blocker or Jake-input boundary is identified.
 
